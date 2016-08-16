@@ -1,6 +1,6 @@
 // ==========  START GOOGLE MAP ========== //
 function initialize() {
-var myLatLng = new google.maps.LatLng(43.26081,-79.933149);
+var myLatLng = new google.maps.LatLng(17.364944,78.395849);
 
 var mapOptions = {
     zoom: 14,
@@ -28,7 +28,7 @@ var mapOptions = {
   
   var contentString = '<div style="max-width: 300px" id="content">'+
       '<div id="bodyContent">'+
-	  '<h5 class="color-primary"><strong>CompuDent</strong></h5>' +
+	  '<h5 class="color-primary"><strong>Dr.Radhika Reddy Dental Clinic</strong></h5>' +
       '<p style="font-size: 12px">Lorem ipsum dolor sit amet,' +
       'incididunt ut labore et dolore psum dolor magna aliqua.</p>'+
       '</div>'+
