@@ -21,12 +21,20 @@ jobs:
         with:
           role-to-assume: arn:aws:iam::833476995316:role/github-actions-deployer
           aws-region: us-east-1
-          
+
       - name: Who am I?
         run: aws sts get-caller-identity
-      # - name: Sync to S3
-      #   run: |
-      #     aws s3 sync ./public s3://rrdental \
-      #       --delete \
-      #       --only-show-errors \
-      #       --acl public-read
+      - name: Sync to S3
+        run: |
+          aws s3 sync . s3://rrdental \
+            --delete \
+            --only-show-errors \
+            --exclude ".git/*" \
+            --exclude ".github/*" \
+            --exclude ".gitignore" \
+            --exclude "node_modules/*" \
+            --exclude "package-lock.json" \
+            --exclude ".env" \
+            --exclude ".env.*" \
+            --exclude "README.md" \
+            --exclude "LICENSE"
